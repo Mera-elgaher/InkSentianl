@@ -1,93 +1,142 @@
-# Graduation project 
+# InkSentinel: AI-Powered Handwritten Signature Verification
 
-InkSentinel: AI-Powered Handwritten Signature Verification
-InkSentinel is a revolutionary mobile application that uses advanced artificial intelligence to verify handwritten signatures with forensic precision. Designed for industries vulnerable to fraud like banking, legal services, and education, our solution delivers 90%+ accuracy in under 30 milliseconds—dramatically outperforming traditional verification methods.
+InkSentinel is a cutting-edge mobile application leveraging advanced artificial intelligence to verify handwritten signatures with forensic-level precision. Tailored for industries prone to fraud, such as banking, legal services, and education, InkSentinel achieves over 90% accuracy in under 30 milliseconds, surpassing traditional verification methods.
 
-Key Features
-✅ Lightning-Fast Verification
-90.83% accuracy in <30ms using Siamese Neural Networks with EfficientNet-Lite
+---
 
-✅ Multi-Platform Support
-Native iOS and Android experience built with Flutter
+## Key Features
 
-✅ Bilingual AI Assistant
-Real-time forensic guidance in English/Arabic using Ollama's LLaMA3.2:latest
+- **⚡ Lightning-Fast Verification**  
+  Achieves 90.83% accuracy in <30ms using Siamese Neural Networks with EfficientNet-Lite.
 
-✅ Military-Grade Security
-AES-256 encryption, GDPR compliance, and Firebase authentication
+- **📱 Multi-Platform Support**  
+  Native iOS and Android apps developed with Flutter for a seamless user experience.
 
-✅ Offline Capability
-TorchScript-optimized model works without internet (<200ms inference)
+- **🗣️ Bilingual AI Assistant**  
+  Provides real-time forensic guidance in English and Arabic, powered by Ollama's LLaMA3.2:latest.
 
-✅ Dynamic Analytics
-Verification history with search/filter and visual similarity reports
+- **🔒 Military-Grade Security**  
+  Implements AES-256 encryption, GDPR compliance, and Firebase authentication.
 
-Technologies Used
-Core Stack
-Flutter Firebase Python PyTorch Flask Ollama
+- **🌐 Offline Capability**  
+  TorchScript-optimized model enables verification without internet (<200ms inference).
 
-AI Models
+- **📊 Dynamic Analytics**  
+  Offers verification history with search/filter options and visual similarity reports.
 
-Signature Verification: Siamese Network with EfficientNet-Lite0
-Chatbot: Meta's LLaMA3.2:latest (3B parameter LLM)
-Security
-AES-256 Firebase Auth Role-Based Access Control GDPR Compliance
+---
 
-Installation & Setup
-Mobile Application
-Download APK
-Download Latest Release (Android)
+## Technologies Used
 
-Enable Unknown Sources
-Go to Settings → Security → Enable "Install unknown apps"
+### Core Stack
+- **Frontend**: Flutter
+- **Backend**: Python, Flask
+- **AI/ML**: PyTorch, Ollama
+- **Database & Auth**: Firebase
 
-Install & Launch
-Open the APK file and follow installation prompts
+### AI Models
+- **Signature Verification**: Siamese Network with EfficientNet-Lite0
+- **Chatbot**: Meta's LLaMA3.2:latest (3B parameter LLM)
 
-Development Environment
-# Clone repository
-git clone https://github.com/graduationteam25/InkSentinel
+### Security
+- AES-256 Encryption
+- Firebase Authentication
+- Role-Based Access Control
+- GDPR Compliance
 
-# Install dependencies
-cd inksentinel && flutter pub get
+---
 
-# Run Flutter app
-flutter run
+## Installation & Setup
 
-# Start backend server
-cd API_model && pip install -r requirements.txt
-python app.py
-Dataset
-Our AI model was trained on the CEDAR Signature Verification Dataset:
-Download Dataset
+### Mobile Application (Android)
+1. **Download APK**  
+   Get the latest release from [GitHub Releases](https://github.com/graduationteam25/InkSentinel/releases).
 
-Dataset Structure
-├── original
-│   ├── original_1.png
-│   └── ... 
-└── forged
-    ├── forged_1.png
-    └── ...
-Chatbot Integration
-InkSentinel's bilingual assistant runs locally using:
-Ollama Framework
+2. **Enable Unknown Sources**  
+   Navigate to `Settings → Security → Enable "Install unknown apps"`.
 
-# Sample Ollama API call
+3. **Install & Launch**  
+   Open the APK file and follow the installation prompts.
+
+### Development Environment
+1. **Clone the Repository**
+   ```bash
+   git clone https://github.com/graduationteam25/InkSentinel
+   ```
+
+2. **Install Flutter Dependencies**
+   ```bash
+   cd inksentinel
+   flutter pub get
+   ```
+
+3. **Run the Flutter App**
+   ```bash
+   flutter run
+   ```
+
+4. **Start the Backend Server**
+   ```bash
+   cd API_model
+   pip install -r requirements.txt
+   python app.py
+   ```
+
+---
+
+## Dataset
+
+InkSentinel's AI model was trained on the **CEDAR Signature Verification Dataset**.  
+- **Download**: [CEDAR Dataset](https://cedar.buffalo.edu/resources.html)  
+- **Structure**:
+  ```
+  ├── original
+  │   ├── original_1.png
+  │   └── ...
+  └── forged
+      ├── forged_1.png
+      └── ...
+  ```
+
+---
+
+## Chatbot Integration
+
+The bilingual assistant runs locally using the **Ollama Framework**. Below is a sample API call:
+
+```python
 import ollama
 
 response = ollama.chat(
-  model='llama3.2:latest',
-  messages=[{'role': 'user', 'content': 'Explain signature forgery types'}]
+    model='llama3.2:latest',
+    messages=[{'role': 'user', 'content': 'Explain signature forgery types'}]
 )
 print(response['message']['content'])
-Future Roadmap
-Accuracy Boost → 95%+ target with ensemble models
-Liveness Detection → Prevent screenshot spoofing
-Blockchain Integration → Immutable verification records
-Enterprise API → RESTful service for document workflows
-Cross-Platform Expansion → Web and desktop versions
-Multi-Signature Analysis → Contract verification support
+```
 
-GitHub (https://github.com/graduationteam25/InkSentinel)
-GitHub - graduationteam25/InkSentinel
-Contribute to graduationteam25/InkSentinel development by creating an account on GitHub.
+---
+
+## Future Roadmap
+
+- **Accuracy Boost**: Target 95%+ with ensemble models.
+- **Liveness Detection**: Prevent screenshot spoofing.
+- **Blockchain Integration**: Immutable verification records.
+- **Enterprise API**: RESTful service for document workflows.
+- **Cross-Platform Expansion**: Web and desktop versions.
+- **Multi-Signature Analysis**: Support for contract verification.
+
+---
+
+## Contributing
+
+We welcome contributions! Please check out our [GitHub repository](https://github.com/graduationteam25/InkSentinel) to get started.
+
+---
+
+## License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+
+---
+
+**GitHub Repository**: [graduationteam25/InkSentinel](https://github.com/graduationteam25/InkSentinel)
